@@ -1,0 +1,23 @@
+main {
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+section {
+    padding: 20px;
+}
+
+.left-side {
+    width: 65%;
+}
+
+.right-side {
+    width: 35%;
+}
