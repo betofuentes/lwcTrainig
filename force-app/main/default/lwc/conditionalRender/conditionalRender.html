@@ -1,0 +1,17 @@
+<template>
+    <template lwc:if={showThis}>
+        <p>
+            Conditional Render
+        </p>
+    </template>
+    <template lwc:elseif={showThis}>
+        <p>
+            Segundo elemento
+        </p>
+    </template>
+    <template lwc:else>
+        <p>
+            elemento por default
+        </p>
+    </template>
+</template>
