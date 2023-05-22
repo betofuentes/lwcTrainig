@@ -8,6 +8,7 @@ main {
     background-color: white;
     display: flex;
     flex-direction: row;
+    gap: 10px
 }
 
 section {

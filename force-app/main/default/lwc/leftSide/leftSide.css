@@ -1,0 +1,15 @@
+.left-side-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    gap: 10px;
+}
+header {
+    border: 1px solid black;
+}
+
+section {
+    border: 1px solid black;
+}
