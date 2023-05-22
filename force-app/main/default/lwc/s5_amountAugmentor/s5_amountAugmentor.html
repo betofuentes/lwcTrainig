@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title={accountName}>
+        <lightning-button label="-1000" onclick={sub1000}></lightning-button>
+        <lightning-button label="-100" onclick={sub100}></lightning-button>
+        <lightning-button label="+100" onclick={add100}></lightning-button>
+        <lightning-button label="+1000" onclick={add1000}></lightning-button>
+        <p class="slds-p-horizontal_small">A sumar: {allSums.sumAmount}</p>
+        <!-- <p class="slds-p-horizontal_small">{amount}</p> -->
+
+        <div slot="footer">
+            <p>Total: {amount} + {allSums.sumAmount} = {totalSumAmt}</p>
+            <lightning-button lwc:if={isNotCero} label="Save" onclick={save}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
