@@ -1,0 +1,7 @@
+<template>
+    <template for:each={listaDeElementos} for:item="elemento">
+        <lightning-card title="Elemento" key={elemento.Id}>
+            <strong>{elemento.name}</strong>
+        </lightning-card>
+    </template>
+</template>
