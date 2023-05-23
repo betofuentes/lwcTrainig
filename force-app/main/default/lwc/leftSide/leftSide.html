@@ -5,7 +5,16 @@
                 <h1>Opportunity Manager</h1>
                 <button>New Opportunity</button>
             </div>
-            <div >Aquí va el picklist</div>
+            <div >
+                <lightning-combobox
+                    name="StageName"
+                    label="Stage"
+                    value={value}
+                    options={options}
+                    >
+
+                </lightning-combobox>
+            </div>
         </header>
         <section>Aquí va el tabsComponent</section>
     </div>
