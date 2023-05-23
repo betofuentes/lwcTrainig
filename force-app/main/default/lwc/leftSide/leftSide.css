@@ -7,7 +7,46 @@
     gap: 10px;
 }
 header {
-    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px 10px;
+    border: 1px solid #D70901;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brand-align {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #931621;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+button {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FCEDEF;
+    background-color: #931621;
+}
+
+button:hover {
+    color: #931621;
+    background-color: #FCEDEF;
+    border-bottom: 2px solid #D70901;
+}
+
+lightning-combobox {
+    width: 150px;
 }
 
 section {
