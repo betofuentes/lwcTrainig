@@ -45,10 +45,6 @@ button:hover {
     border-bottom: 2px solid #D70901;
 }
 
-lightning-combobox {
-    width: 150px;
-}
-
 section {
-    border: 1px solid black;
+    position: relative;
 }
