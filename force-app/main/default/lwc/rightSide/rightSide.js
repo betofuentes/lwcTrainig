@@ -10,4 +10,5 @@ import OWNER from '@salesforce/schema/Opportunity.OwnerId';
 
 export default class RightSide extends LightningElement {
     fields = [NAME, AMOUNT, STAGE, TYPE, PROBABILITY, CLOSE_DATE, ACCOUNT, OWNER];
+    recordId;
 }
