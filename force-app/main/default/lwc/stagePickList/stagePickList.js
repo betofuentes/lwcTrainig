@@ -37,4 +37,17 @@ export default class StagePickList extends LightningElement {
            console.error(error);
        }
    }
+
+   handleChange(event){
+    console.log(event.detail.value);
+    
+    let selectedStage = event.detail.value;
+
+    const stageSelectedEvent = new CustomEvent("selectedEvent", {
+        detail: selectedStage
+    });
+
+    this.dispatchEvent(stageSelectedEvent); //envía el evento.
+
+   }
 }

@@ -5,10 +5,10 @@
                 <h1>Opportunity Manager</h1>
                 <button>New Opportunity</button>
             </div>
-                <c-stage-pick-list></c-stage-pick-list>
+                <c-stage-pick-list onselect={handleOnSelect}></c-stage-pick-list>
         </header>
         <section>
-            <c-tabs-component></c-tabs-component>
+            <c-tabs-component opportunities={filteredData}></c-tabs-component>
         </section>
     </div>
 </template>
