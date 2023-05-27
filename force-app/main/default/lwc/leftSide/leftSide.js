@@ -1,8 +1,8 @@
-import { LightningElement, wire, api } from 'lwc';
+import { LightningElement, wire, api, track} from 'lwc';
 import getOpportunities from '@salesforce/apex/opportunityController.getOpportunities'
 export default class LeftSide extends LightningElement {
     allOpps;
-    filteredData;
+    @track filteredData;
     filterBy;
 
     @wire(getOpportunities)
@@ -16,13 +16,14 @@ export default class LeftSide extends LightningElement {
     }
 
     handleOnSelect(event){
-        console.log(event.detail.stage);
-        this.filterBy = event.detail.stage;
+        console.log("Evento en handleOnSelect: " + JSON.stringify(event.detail));
+        this.filterBy = event.detail;
         if(this.filterBy === 'AllStages') {
             this.filteredData = this.allOpps;
         } else {
-            this.filteredData = this.allOpps.filter((opportunity) => this.filterBy === opportunity.stage);
+            this.filteredData = this.allOpps.filter((opportunity) => opportunity.StageName === this.filterBy);
         }
+        //console.log(JSON.stringify(this.filteredData));
     }
 
 }
