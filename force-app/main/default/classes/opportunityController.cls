@@ -22,4 +22,9 @@ public with sharing class opportunityController {
             throw new AuraHandledException(e.getMessage());
         }
     }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Opportunity> getOpportunities(){
+        return [SELECT Id, Name, Amount, Probability, StageName, type, CloseDate FROM Opportunity LIMIT 100];
+    }
 }

@@ -1,12 +1,17 @@
 <template>
     <lightning-tabset>
         <lightning-tab label="Details">
-            <lightning-record-form
-                object-api-name="Opportunity"
-                record-id="006Dn000008JdJmIAK"
-                fields={fields}
-            >
-        </lightning-record-form>
+            <template lwc:if={recordId}>
+                <lightning-record-form
+                    object-api-name="Opportunity"
+                    record-id={recordId}
+                    fields={fields}
+                >
+            </lightning-record-form>
+            </template>
+            <template lwc:else>
+                <p>There is no Opportunity Record Selected</p>
+            </template>
         </lightning-tab>
     </lightning-tabset>
 </template>
